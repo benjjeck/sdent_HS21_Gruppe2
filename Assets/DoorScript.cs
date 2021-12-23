@@ -7,6 +7,7 @@ public class DoorScript : MonoBehaviour
 {
     
     public GameObject door;
+    public new bool enabled = true;
     private Animator animator;
 
     private int boolHash = Animator.StringToHash("character_nearby");
@@ -27,11 +28,14 @@ public class DoorScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (enabled)
         {
-            animator.SetBool("character_nearby", true);
-            Debug.Log("Enter Door Trigger");
+            if (other.gameObject.CompareTag("Player"))
+            {
+                animator.SetBool("character_nearby", true);
+                Debug.Log("Enter Door Trigger");
 
+            }
         }
 
         
@@ -39,12 +43,15 @@ public class DoorScript : MonoBehaviour
 
     private void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (enabled)
         {
-            animator.SetBool("character_nearby", false);
-            Debug.Log("Exit Door Trigger");
+            if (other.gameObject.CompareTag("Player"))
+            {
+                animator.SetBool("character_nearby", false);
+                Debug.Log("Exit Door Trigger");
+            }
+            
         }
-        
 
     }
 }
