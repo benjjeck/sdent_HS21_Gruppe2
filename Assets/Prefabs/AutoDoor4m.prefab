@@ -134,6 +134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1921296685162256134}
     m_Modifications:
+    - target: {fileID: 2437192916381847366, guid: c7df46f368e0f3e44a5cd6d2af2e4281, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b2861f98aacf9e45804b4240b279d93, type: 2}
     - target: {fileID: 3508985151751903545, guid: c7df46f368e0f3e44a5cd6d2af2e4281, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -182,6 +186,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AutoDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 4223753870922218229, guid: c7df46f368e0f3e44a5cd6d2af2e4281, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b2861f98aacf9e45804b4240b279d93, type: 2}
+    - target: {fileID: 6753712508202226629, guid: c7df46f368e0f3e44a5cd6d2af2e4281, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b2861f98aacf9e45804b4240b279d93, type: 2}
+    - target: {fileID: 7718432315799751637, guid: c7df46f368e0f3e44a5cd6d2af2e4281, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b2861f98aacf9e45804b4240b279d93, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7df46f368e0f3e44a5cd6d2af2e4281, type: 3}
 --- !u!4 &8952602519363730746 stripped

@@ -5,12 +5,11 @@ public class DoorScript : MonoBehaviour
     public GameObject door;
 
     [SerializeField] private bool isEnabled = true;
+   
     private Animator animator;
     [SerializeField] private GameObject[] statusLights;
-
     [SerializeField] private Material enabledColor;
-    [SerializeField] private Material disabledColor;
-    [SerializeField] private Material openColor;
+    [SerializeField] private Material disabledColor; 
 
     private Material[] newMaterials;
     
@@ -20,31 +19,23 @@ public class DoorScript : MonoBehaviour
     void Start()
     { 
         animator = door.GetComponent<Animator>();
-        Debug.Log("Hallo debug here");
         if (isEnabled)
         {
-            foreach (var statusLight in statusLights)
-            { 
-                newMaterials = statusLight.GetComponent<MeshRenderer>().materials;
-                newMaterials[1] = enabledColor;
-                statusLight.GetComponent<MeshRenderer>().materials = newMaterials;
-            }
+            SetStatusColor(enabledColor);
         }
         else
         {
-            foreach (var statusLight in statusLights)
-            { 
-                newMaterials = statusLight.GetComponent<MeshRenderer>().materials;
-                newMaterials[1] = disabledColor;
-                statusLight.GetComponent<MeshRenderer>().materials = newMaterials;
-            }
+            SetStatusColor(disabledColor);
         }
     }
 
-    // // Update is called once per frame
+    // Update is called once per frame
     // void Update()
     // {
-    //     
+    //     if (isEnabled)
+    //     {
+    //         
+    //     }   
     // }
 
 
@@ -55,13 +46,7 @@ public class DoorScript : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 animator.SetBool(CharacterNearby, true);
-                Debug.Log("Enter Door Trigger");
-                foreach (var statusLight in statusLights)
-                { 
-                    newMaterials = statusLight.GetComponent<MeshRenderer>().materials;
-                    newMaterials[1] = openColor;
-                    statusLight.GetComponent<MeshRenderer>().materials = newMaterials;
-                }
+                
             }
         }
     }
@@ -73,24 +58,34 @@ public class DoorScript : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 animator.SetBool(CharacterNearby, false);
-                Debug.Log("Exit Door Trigger");
-                
-                foreach (var statusLight in statusLights)
-                { 
-                    newMaterials = statusLight.GetComponent<MeshRenderer>().materials;
-                    newMaterials[1] = enabledColor;
-                    statusLight.GetComponent<MeshRenderer>().materials = newMaterials;
-                }
             }
-            else
-            {
-                foreach (var statusLight in statusLights)
-                { 
-                    newMaterials = statusLight.GetComponent<MeshRenderer>().materials;
-                    newMaterials[1] = disabledColor;
-                    statusLight.GetComponent<MeshRenderer>().materials = newMaterials;
-                }
-            }
+            
+        }
+    }
+
+
+    public void SetEnabled(bool intent)
+    {
+        if (intent)
+        {
+            SetStatusColor(enabledColor);
+        }
+        else
+        {
+            SetStatusColor(disabledColor);
+        }
+    }
+
+
+    private void SetStatusColor(Material newColor)
+    {
+        foreach (var statusLight in statusLights)
+        {
+            newMaterials = statusLight.GetComponent<MeshRenderer>().materials;
+            newMaterials[1] = newColor;
+            statusLight.GetComponent<MeshRenderer>().materials = newMaterials;
+            statusLight.GetComponentInChildren<Light>().color = newColor.color;
+
         }
     }
 }
