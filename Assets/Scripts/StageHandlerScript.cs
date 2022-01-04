@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class StageHandlerScript : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class StageHandlerScript : MonoBehaviour
 
     [Header("Stage 3")]
     [SerializeField] private GameObject[] Stage3DisabledDoors;
-    [SerializeField] private GameObject[] Stage3EabledDoors;
+    [SerializeField] private GameObject[] Stage3EnabledDoors;
 
     [Header("Stage 4")]
     [SerializeField] private GameObject[] Stage4DisabledDoors;
@@ -32,11 +33,39 @@ public class StageHandlerScript : MonoBehaviour
         }
     }
 
-    void InitializeStage_2()
+    public void InitializeStage_2()
     {
         foreach (var door in Stage2DisabledDoors)
         {
             door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+        }
+        foreach (var door in Stage2EnabledDoors)
+        {
+            door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+        }
+    }
+    
+    public void InitializeStage_3()
+    {
+        foreach (var door in Stage3DisabledDoors)
+        {
+            door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+        }
+        foreach (var door in Stage3EnabledDoors)
+        {
+            door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+        }
+    }
+    
+    public void InitializeStage_4()
+    {
+        foreach (var door in Stage4DisabledDoors)
+        {
+            door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+        }
+        foreach (var door in Stage4EnabledDoors)
+        {
+            door.GetComponentInChildren<DoorScript>().SetEnabled(true);
         }
     }
 }
