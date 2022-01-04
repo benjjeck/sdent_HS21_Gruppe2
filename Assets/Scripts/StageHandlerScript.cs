@@ -27,6 +27,7 @@ public class StageHandlerScript : MonoBehaviour
 
     void InitialzieStage_1()
     {
+        Debug.Log("Init Stage 1");
         foreach (var door in Stage1DisabledDoors)
         {
             door.GetComponentInChildren<DoorScript>().SetEnabled(false);
@@ -35,6 +36,8 @@ public class StageHandlerScript : MonoBehaviour
 
     public void InitializeStage_2()
     {
+        Debug.Log("Init Stage 2");
+
         foreach (var door in Stage2DisabledDoors)
         {
             door.GetComponentInChildren<DoorScript>().SetEnabled(false);
@@ -47,6 +50,8 @@ public class StageHandlerScript : MonoBehaviour
     
     public void InitializeStage_3()
     {
+        Debug.Log("Init Stage 3");
+
         foreach (var door in Stage3DisabledDoors)
         {
             door.GetComponentInChildren<DoorScript>().SetEnabled(false);
@@ -59,6 +64,8 @@ public class StageHandlerScript : MonoBehaviour
     
     public void InitializeStage_4()
     {
+        Debug.Log("Init Stage 4");
+
         foreach (var door in Stage4DisabledDoors)
         {
             door.GetComponentInChildren<DoorScript>().SetEnabled(false);

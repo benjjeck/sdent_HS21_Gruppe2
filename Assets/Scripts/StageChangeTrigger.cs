@@ -12,9 +12,12 @@ public class StageChangeTrigger : MonoBehaviour
     [SerializeField] private int StagetoEnd; 
     private void OnCollisionEnter(Collision other)
     {
+        Debug.Log("Collision Registered");
+
         
             if (other.gameObject.CompareTag("Player"))
             {
+                Debug.Log("Collision with Player Registered");
                 switch (StagetoEnd)
                 {
                     case 1 : StageManager.GetComponent<StageHandlerScript>().InitializeStage_2(); break;

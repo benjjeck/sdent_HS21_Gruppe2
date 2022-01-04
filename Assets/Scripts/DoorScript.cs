@@ -69,10 +69,12 @@ public class DoorScript : MonoBehaviour
         if (intent)
         {
             SetStatusColor(enabledColor);
+            isEnabled = true;
         }
         else
         {
             SetStatusColor(disabledColor);
+            isEnabled = false;
         }
     }
 
