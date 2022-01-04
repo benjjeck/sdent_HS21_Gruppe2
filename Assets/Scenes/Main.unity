@@ -16291,15 +16291,15 @@ MonoBehaviour:
   - {fileID: 1696564838}
   - {fileID: 1696564837}
   - {fileID: 1696564836}
+  - {fileID: 209073937}
+  - {fileID: 99474914}
+  - {fileID: 99474915}
+  - {fileID: 99474916}
   - {fileID: 1014075770}
   - {fileID: 944440417}
   - {fileID: 944440416}
   - {fileID: 944440415}
-  - {fileID: 209073937}
   - {fileID: 209073936}
-  - {fileID: 99474916}
-  - {fileID: 99474915}
-  - {fileID: 99474914}
   Stage2DisabledDoors:
   - {fileID: 1696564838}
   - {fileID: 480165934}
