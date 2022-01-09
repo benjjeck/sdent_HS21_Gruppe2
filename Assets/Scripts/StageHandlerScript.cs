@@ -18,6 +18,7 @@ public class StageHandlerScript : MonoBehaviour
     [SerializeField] private GameObject[] Stage4DisabledDoors;
     [SerializeField] private GameObject[] Stage4EnabledDoors;
 
+    private int stage = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,52 +28,72 @@ public class StageHandlerScript : MonoBehaviour
 
     void InitialzieStage_1()
     {
-        Debug.Log("Init Stage 1");
-        foreach (var door in Stage1DisabledDoors)
+        if (stage == 0)
         {
-            door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+            Debug.Log("Init Stage 1");
+            foreach (var door in Stage1DisabledDoors)
+            {
+                door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+            }
+
+            stage = 1;
         }
     }
 
     public void InitializeStage_2()
     {
-        Debug.Log("Init Stage 2");
+        if (stage == 1)
+        {
+            Debug.Log("Init Stage 2");
 
-        foreach (var door in Stage2DisabledDoors)
-        {
-            door.GetComponentInChildren<DoorScript>().SetEnabled(false);
-        }
-        foreach (var door in Stage2EnabledDoors)
-        {
-            door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+            foreach (var door in Stage2DisabledDoors)
+            {
+                door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+            }
+            foreach (var door in Stage2EnabledDoors)
+            {
+                door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+            }
+
+            stage = 2;
         }
     }
     
     public void InitializeStage_3()
     {
-        Debug.Log("Init Stage 3");
+        if (stage == 2)
+        {
+            Debug.Log("Init Stage 3");
 
-        foreach (var door in Stage3DisabledDoors)
-        {
-            door.GetComponentInChildren<DoorScript>().SetEnabled(false);
-        }
-        foreach (var door in Stage3EnabledDoors)
-        {
-            door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+            foreach (var door in Stage3DisabledDoors)
+            {
+                door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+            }
+            foreach (var door in Stage3EnabledDoors)
+            {
+                door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+            }
+
+            stage = 3;
         }
     }
     
     public void InitializeStage_4()
     {
-        Debug.Log("Init Stage 4");
+        if (stage == 3)
+        {
+            Debug.Log("Init Stage 4");
 
-        foreach (var door in Stage4DisabledDoors)
-        {
-            door.GetComponentInChildren<DoorScript>().SetEnabled(false);
-        }
-        foreach (var door in Stage4EnabledDoors)
-        {
-            door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+            foreach (var door in Stage4DisabledDoors)
+            {
+                door.GetComponentInChildren<DoorScript>().SetEnabled(false);
+            }
+            foreach (var door in Stage4EnabledDoors)
+            {
+                door.GetComponentInChildren<DoorScript>().SetEnabled(true);
+            }
+
+            stage = 4;
         }
     }
 }
