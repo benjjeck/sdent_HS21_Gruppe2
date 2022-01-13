@@ -39,7 +39,7 @@ public class DoorScript : MonoBehaviour
     // }
 
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (isEnabled)
         {
@@ -51,7 +51,7 @@ public class DoorScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (isEnabled)
         {
@@ -86,7 +86,7 @@ public class DoorScript : MonoBehaviour
             newMaterials = statusLight.GetComponent<MeshRenderer>().materials;
             newMaterials[1] = newColor;
             statusLight.GetComponent<MeshRenderer>().materials = newMaterials;
-            statusLight.GetComponentInChildren<Light>().color = newColor.color;
+            //statusLight.GetComponentInChildren<Light>().color = newColor.color;
 
         }
     }
