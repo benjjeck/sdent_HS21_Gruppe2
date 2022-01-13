@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
+
 using UnityEngine;
-using Valve.VR;
 
 public class StageChangeTrigger : MonoBehaviour
 {
@@ -10,7 +7,7 @@ public class StageChangeTrigger : MonoBehaviour
     [SerializeField] private GameObject StageManager;
     [Range(1,3)]
     [SerializeField] private int StagetoEnd; 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision Registered");
 

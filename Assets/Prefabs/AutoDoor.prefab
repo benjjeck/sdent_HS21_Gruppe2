@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3508985151520466345}
   - component: {fileID: 3508985151520466344}
   - component: {fileID: 3508985151520466343}
-  - component: {fileID: 3508985151520466342}
   m_Layer: 6
   m_Name: Sensor
   m_TagString: Untagged
@@ -66,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.294922, y: 3.5071745, z: 3.1798038}
-  m_Center: {x: -0.46029663, y: 0.09581566, z: -0.011976719}
+  m_Size: {x: 7.7431836, y: 3.5071745, z: 3.1798038}
+  m_Center: {x: -0.11199212, y: 0.09581566, z: -0.011976719}
 --- !u!54 &3508985151520466343
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -84,18 +83,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &3508985151520466342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3508985151520466347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3be917a80086a48b97933694257f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3508985151751903546
 GameObject:
   m_ObjectHideFlags: 0

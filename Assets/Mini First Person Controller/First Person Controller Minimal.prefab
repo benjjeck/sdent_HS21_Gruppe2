@@ -398,8 +398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  canRun: 0
-  runSpeed: 9
+  canRun: 1
+  runSpeed: 13
   runningKey: 304
 --- !u!1 &5241892580736583940
 GameObject:
@@ -540,7 +540,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 5
