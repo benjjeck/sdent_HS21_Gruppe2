@@ -10886,6 +10886,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 462610, guid: 3652e806c80ad9c469bf82530b932c4a, type: 3}
   m_PrefabInstance: {fileID: 717604972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &722602629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3058184479438430668, guid: bcefacd0d26f9f847af3fee1de6d8f9d, type: 3}
+  m_PrefabInstance: {fileID: 99474912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &723397850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20716,6 +20721,7 @@ MonoBehaviour:
   - {fileID: 944440415}
   - {fileID: 209073936}
   - {fileID: 444066174}
+  - {fileID: 722602629}
   Stage2DisabledDoors:
   - {fileID: 1696564838}
   - {fileID: 480165934}
